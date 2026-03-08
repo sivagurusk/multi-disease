@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/multi-disease/static/css/main.6c63bb5f.css",
+    "main.js": "/multi-disease/static/js/main.57c36aa5.js",
+    "index.html": "/multi-disease/index.html",
+    "main.6c63bb5f.css.map": "/multi-disease/static/css/main.6c63bb5f.css.map",
+    "main.57c36aa5.js.map": "/multi-disease/static/js/main.57c36aa5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6c63bb5f.css",
+    "static/js/main.57c36aa5.js"
+  ]
+}
