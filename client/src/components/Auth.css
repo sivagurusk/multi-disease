@@ -1,0 +1,153 @@
+/* Auth Container */
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Auth Card */
+.auth-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 420px;
+  padding: 40px 30px;
+  animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Auth Header */
+.auth-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.auth-header h2 {
+  margin: 0;
+  font-size: 28px;
+  color: #28a745;
+  font-weight: 700;
+}
+
+.auth-header p {
+  margin: 8px 0 0;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Auth Form */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Form Group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+/* Form Input */
+.form-input {
+  padding: 12px 14px;
+  border: 1.5px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  font-family: Arial, sans-serif;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #28a745;
+  box-shadow: 0 0 0 4px rgba(40, 167, 69, 0.1);
+  background: #f8fff9;
+}
+
+.form-input::placeholder {
+  color: #aaa;
+}
+
+/* Auth Button */
+.auth-button {
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.auth-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(40, 167, 69, 0.3);
+}
+
+.auth-button:active {
+  transform: translateY(0);
+}
+
+/* Auth Footer */
+.auth-footer {
+  text-align: center;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.auth-footer p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Auth Link */
+.auth-link {
+  color: #28a745;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.auth-link:hover {
+  color: #20c997;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .auth-card {
+    padding: 30px 20px;
+  }
+
+  .auth-header h2 {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,150 @@
+/* styles to mimic screenshot layout */
+.predict-container {
+  display: flex;
+  gap: 20px;
+}
+.predict-main {
+  flex: 2;
+}
+.predict-sidebar {
+  flex: 1;
+  position: sticky;
+  top: 20px;
+  align-self: flex-start;
+  background: #f1fdf2;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #cde9d7;
+}
+.patient-info {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.patient-info div {
+  flex: 1 1 200px;
+}
+.patient-info label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.patient-info input,
+.patient-info select {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+h4.section-title {
+  margin-top: 20px;
+  font-size: 1.1em;
+  color: #4e73df;
+  font-weight: 600;
+}
+
+.stepper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.stepper div {
+  flex: 1;
+  text-align: center;
+  padding: 6px 0;
+  border-bottom: 2px solid #ccc;
+  position: relative;
+}
+.stepper div.active {
+  border-color: #4e73df;
+  font-weight: bold;
+}
+.stepper div::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 14px;
+  background: #ccc;
+}
+.stepper div:last-child::after { display: none; }
+.fieldset-group {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.fieldset-group legend {
+  font-weight: bold;
+  padding: 0 4px;
+}
+.checkbox-label {
+  display: inline-block;
+  width: 45%;
+  margin: 4px 0;
+  cursor: pointer;
+}
+.checkbox-label input {
+  margin-right: 6px;
+}
+.button-primary {
+  padding: 8px 16px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 4px;
+}
+.button-primary:disabled {
+  background-color: #94d3a2;
+  cursor: not-allowed;
+}
+.sidebar-summary h3 {
+  margin-top: 0;
+}
+.sidebar-summary button {
+  margin-top: 10px;
+  padding: 6px 12px;
+  background: transparent;
+  border: 1px solid #888;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* disease accordion styling */
+.disease-list {
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px;
+  background: #fafafa;
+}
+.disease-group {
+  margin-bottom: 6px;
+}
+.disease-header {
+  font-weight: 600;
+  cursor: pointer;
+  padding: 4px;
+  background: #e9ecef;
+  border-radius: 2px;
+}
+.disease-symptoms {
+  padding-left: 12px;
+  margin-top: 4px;
+}
+.small-link {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 0.85em;
+  color: #007bff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.small-link:focus { outline: none; }
+

@@ -1,0 +1,150 @@
+.App {
+  text-align: center;
+  min-height: 100vh;
+  background: #f8f9fa;
+  font-family: Arial, sans-serif;
+}
+
+/* Header Styling */
+.App h1 {
+  margin: 0 0 30px 0;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  border-radius: 10px;
+  font-size: 28px;
+}
+
+/* Navigation Container */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  gap: 10px;
+}
+
+.nav-container > div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Global Button Styling */
+button {
+  font-family: inherit;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Primary Button */
+button.btn-primary,
+button:not([class*="btn-"]):not([class*="modal-"]):not([class*="small-"]):not([class*="checkbox"]) {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: #fff;
+}
+
+button.btn-primary:hover {
+  background: linear-gradient(135deg, #20c997 0%, #17a2b8 100%);
+}
+
+/* Secondary Button */
+button.btn-secondary {
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  color: #fff;
+}
+
+button.btn-secondary:hover {
+  background: linear-gradient(135deg, #0056b3 0%, #004085 100%);
+}
+
+/* Warning Button */
+button.btn-warning {
+  background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
+  color: #000;
+}
+
+button.btn-warning:hover {
+  background: linear-gradient(135deg, #ff9800 0%, #ff6f00 100%);
+}
+
+/* Info Button */
+button.btn-info {
+  background: linear-gradient(135deg, #17a2b8 0%, #0099cc 100%);
+  color: #fff;
+}
+
+button.btn-info:hover {
+  background: linear-gradient(135deg, #0099cc 0%, #006bb3 100%);
+}
+
+/* Danger Button */
+button.btn-danger {
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+  color: #fff;
+}
+
+button.btn-danger:hover {
+  background: linear-gradient(135deg, #c82333 0%, #bd2130 100%);
+}
+
+/* Logout Button */
+button.logout-btn {
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+  color: #fff;
+}
+
+button.logout-btn:hover {
+  background: linear-gradient(135deg, #c82333 0%, #bd2130 100%);
+}
+
+
+/* Modal and Navigation Buttons (smaller) */
+button.modal-close,
+button[class*="small"] {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+/* Disabled Button */
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* prediction form styling */
+.patient-info label,
+.patient-info input,
+.patient-info select {
+  display: block;
+  width: 100%;
+}
+
+fieldset {
+  background: #fff;
+}
+
+/* sidebar summary styling */
+.predict-summary h3 {
+  margin-top: 0;
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Selection</title>
+  <style>
+    body { font-family: Arial, sans-serif; color: #333; margin:0; padding:0; background:#f5f7fa; }
+    .page { padding: 40px; max-width:800px; margin:auto; background:#fff; page-break-after: always; }
+
+    /* header matching form style */
+    .header { background: #28a745; color: #fff; padding: 20px; text-align: center; }
+    .header h1 { margin:0; font-size: 24px; }
+    .header p { margin:4px 0; font-size:14px; }
+    .badge { display:inline-block; padding:4px 8px; background:#fff; color:#333; border-radius:4px; font-size:12px; margin-top:8px; }
+
+    /* section titles */
+    .section-title { font-size: 16px; color: #28a745; margin: 20px 0 10px; font-weight: 600; }
+
+    .info, .results { display: flex; flex-wrap: wrap; gap: 10px; }
+    .card {
+      flex: 1 1 45%;
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 6px;
+      box-shadow: 0 0 3px rgba(0,0,0,0.1);
+    }
+    .card h2 { margin-top:0; font-size:18px; color:#28a745; }
+
+    ul { padding-left: 20px; }
+    .footer { position: absolute; bottom: 20px; width: 100%; text-align: center; font-size: 0.8em; color: #777; }
+  </style>
+</head>
+<body>
+  <!-- Page 1: header and personal details -->
+  <div class="page">
+    <div class="header">
+      <h1>Health Prediction Report</h1>
+      <% if (name) { %><p>for <strong><%= name %></strong></p><% } %>
+      <% if (prediction) { %><div class="badge"><%= prediction %></div><% } %>
+      <p><%= new Date().toLocaleDateString() %></p>
+    </div>
+    <div class="info">
+      <div class="card">
+        <h2>Personal Details</h2>
+        <p><strong>Name:</strong> <%= name %></p>
+        <% if (age) { %><p><strong>Age:</strong> <%= age %></p><% } %>
+        <% if (gender) { %><p><strong>Gender:</strong> <%= gender %></p><% } %>
+        <% if (contact) { %><p><strong>Contact:</strong> <%= contact %></p><% } %>
+      </div>
+      <% if (symptoms && symptoms.length) { %>
+      <div class="card">
+        <h2>Symptoms</h2>
+        <ul>
+          <% symptoms.forEach(function(s){ %>
+            <li><%= s.replace(/_/g,' ') %></li>
+          <% }); %>
+        </ul>
+      </div>
+      <% } %>
+    </div>
+    <div class="footer">
+      &copy; 2026 Multi-Disease Prediction System
+    </div>
+  </div>
+
+  <!-- Page 2: prediction and advice -->
+  <div class="page">
+    <div class="results">
+      <div class="card">
+        <h2>Prediction</h2>
+        <% if (prediction) { %><p><strong>Disease:</strong> <%= prediction %></p><% } %>
+        <% if (accuracy) { %><p><strong>Accuracy:</strong> <%= Math.round(accuracy * 100) %>%</p><% } %>
+      </div>
+      <div class="card">
+        <h2>Advice</h2>
+        <% if (risk) { %><p><strong>Risk Level:</strong> <%= risk %></p><% } %>
+        <% if (recommendation) { %><p><strong>Recommendation:</strong> <%= recommendation %></p><% } %>
+      </div>
+    </div>
+    <div class="footer">
+      &copy; 2026 Multi-Disease Prediction System
+    </div>
+  </div>
+
+  <!-- Page 3: probability distribution -->
+  <div class="page">
+    <% if (probability_distribution && probability_distribution.length) { %>
+    <div class="section-title">Probability Distribution</div>
+    <ul>
+      <% probability_distribution.forEach(function(p){ %>
+        <li><%= p.disease %>: <%= Math.round(p.probability * 100) %>%</li>
+      <% }); %>
+    </ul>
+    <% } else { %>
+      <p>No probability data available.</p>
+    <% } %>
+    <div class="footer">
+      &copy; 2026 Multi-Disease Prediction System
+    </div>
+  </div>
+
+  <!-- Page 4: symptom match counts -->
+  <div class="page">
+    <% if (match_counts && match_counts.length) { %>
+    <div class="section-title">Symptom Match Counts</div>
+    <ul>
+      <% match_counts.forEach(function(m){ %>
+        <li><%= m.disease %>: <%= m.match_count %></li>
+      <% }); %>
+    </ul>
+    <% } else { %>
+      <p>No match count data available.</p>
+    <% } %>
+    <div class="footer">
+      &copy; 2026 Multi-Disease Prediction System
+    </div>
+  </div>
+
+  <!-- Page 4: next steps and footer -->
+  <div class="page">
+    <% if (next_steps && next_steps.length) { %>
+    <div class="section-title">Recommended Next Steps</div>
+    <ul>
+      <% next_steps.forEach(function(step){ %>
+        <li><%= step %></li>
+      <% }); %>
+    </ul>
+    <% } else { %>
+      <p>No next steps provided.</p>
+    <% } %>
+    <div class="footer">
+      &copy; 2026 Multi-Disease Prediction System
+    </div>
+  </div>
+</body>
+</html>
