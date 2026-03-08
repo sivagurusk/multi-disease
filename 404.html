@@ -1,0 +1,8 @@
+<!-- Redirect all 404s to index.html for React Router on GitHub Pages -->
+<script type="text/javascript">
+  // If not already at the root, redirect to index.html with the correct path
+  var redirectTo = '/multi-disease' + location.pathname + location.search + location.hash;
+  if (location.pathname !== '/multi-disease/' && !location.pathname.endsWith('index.html')) {
+    location.replace('/multi-disease/index.html' + location.search + location.hash);
+  }
+</script>
